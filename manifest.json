@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "Image to word converter",
+  "version": "1.0.0",
+  "description": "Quick access to Front",
+  "author": "Deepak Khadka",
+  "browser_action": {
+      "default_icon": "img/web-developer.png",
+      "default_title": "ITW",
+      "default_popup": "popup.html"
+  },
+  "permissions": ["activeTab", "storage"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "css": ["background.css"],
+      "js": ["js/background.js"]
+    }
+  ]
+}
